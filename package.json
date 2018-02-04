@@ -1,12 +1,17 @@
 {
   "name": "cryptex",
   "version": "0.1.0",
+  "description": "A bot for Cryptex Discord Server",
   "main": "index.js",
   "repository": "https://github.com/ruchern/cryptex-bot.git",
   "author": "Ru Chern Chong <me@ruchern.com>",
   "license": "MIT",
-  "private": false,
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "discord.js": "^11.3.0"
-  }
+  },
+  "devDependencies": {}
 }
