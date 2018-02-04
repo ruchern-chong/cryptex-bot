@@ -1,1 +1,3 @@
-const token = 'DISCORD_TOKEN_HERE'
+module.exports = {
+    token: 'DISCORD_TOKEN'
+}
