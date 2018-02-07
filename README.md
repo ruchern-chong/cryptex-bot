@@ -6,6 +6,9 @@ You should already have `npm` or `yarn` setup.
 
 ## Installation
 For package manager, I will be using `npm` since it is widely used. Feel free to use `yarn` at your own preferences.
+
+To begin, copy `keys.example.js` to `keys.js`
+
 ```
 $ git clone https://github.com/ruchern/cryptex-bot.git
 $ npm install
