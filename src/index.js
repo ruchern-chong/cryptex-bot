@@ -19,4 +19,20 @@ client.on('ready', () => {
 //     Thank you and welcome to Cryptex once again. I hope you enjoy your stay!`)
 // })
 
+client.on('message', async message => {
+  const {author, channel, guild} = message
+
+  if (message.content === '!invites') {
+    let inviteCount = 0
+
+    await guild.fetchInvites().then(invites => {
+      invites.forEach(invite => {
+        if (invite.inviter.id === author.id) inviteCount += invite.uses
+      })
+    })
+
+    channel.send(`Hi ${author}, you have ${inviteCount} invites.`)
+  }
+})
+
 client.login(token).then(() => console.log('Successfully logged in.'))
