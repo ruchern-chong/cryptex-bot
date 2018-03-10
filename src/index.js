@@ -27,8 +27,10 @@ client.on('message', async message => {
 
     await guild.fetchInvites().then(invites => {
       invites.forEach(invite => {
-        if (invite.inviter.id === author.id) inviteCount += invite.uses
+        if (invite.inviter === author) inviteCount += invite.uses
       })
+    }).catch(error => {
+      console.log(error)
     })
 
     channel.send(`Hi ${author}, you have ${inviteCount} invites.`)
