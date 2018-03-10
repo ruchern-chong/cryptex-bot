@@ -1,6 +1,6 @@
 {
-  "name": "cryptex",
-  "version": "0.1.0",
+  "name": "cryptex-bot",
+  "version": "1.0.0",
   "description": "A bot for Cryptex Discord Server",
   "main": "src/index.js",
   "repository": "https://github.com/ruchern/cryptex-bot.git",
