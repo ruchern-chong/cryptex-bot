@@ -1,5 +1,5 @@
 # Cryptex Bot
-This is a bot that provides news and some non-intrusive information for [Cryptex Discord Server](https://discord.gg/vbDkbnU).
+This is a bot that provides news and some non-intrusive information for [Cryptex Discord Server](https://discord.gg/YKpUTPx).
 
 ## Prerequisites
 You should already have `npm` or `yarn` setup.
@@ -19,4 +19,4 @@ $ npm start
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgements
-- [Cryptex Discord Server](https://discord.gg/vbDkbnU)
+- [Cryptex Discord Server](https://discord.gg/YKpUTPx)
