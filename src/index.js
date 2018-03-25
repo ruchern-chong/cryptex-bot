@@ -8,13 +8,20 @@ client.on('message', async message => {
   const { author, channel, guild } = message
 
   if (message.content === '!invites') {
+    let entries
     let inviteCount = 0
 
-    await guild.fetchInvites().then(invites => {
-      invites.forEach(invite => {
-        if (invite.inviter === author) inviteCount += invite.uses
-      })
-    }).catch(error => console.log(error))
+    const options = { user: author, type: 40 }
+
+    await guild.fetchAuditLogs(options).then(audit => {
+      entries = audit.entries
+    })
+
+    entries.forEach(entry => {
+      if (entry.target.uses) {
+        inviteCount += entry.target.uses
+      }
+    })
 
     channel.send(`Hi ${author}, you have ${inviteCount} invites.`)
   }
