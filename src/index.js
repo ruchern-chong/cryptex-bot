@@ -24,9 +24,7 @@ client.on('message', async message => {
 
     userInvites = invites.filter(invite => invite.inviter === member.user)
 
-    userInvites.forEach(userInvite => {
-      inviteCount += userInvite.uses
-    })
+    userInvites.forEach(userInvite => inviteCount += userInvite.uses)
 
     const roleToBeAdded = inviteRoles.find(inviteRole => inviteCount >= inviteRole.threshold)
 
