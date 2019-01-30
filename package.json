@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon src/index.js --exec babel-node",
-    "build": "babel src -d build",
+    "build": "babel src -d build --ignore src/**/__tests__/*.js",
     "lint": "eslint --ext .js src",
     "test": "jest"
   },
