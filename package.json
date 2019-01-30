@@ -2,7 +2,7 @@
   "name": "cryptex-bot",
   "version": "1.0.2",
   "description": "A bot for Cryptex Discord Server",
-  "main": "src/index.js",
+  "main": "build/index.js",
   "repository": "https://github.com/ruchern/cryptex-bot.git",
   "author": "Ru Chern Chong <hello@ruchern.net>",
   "license": "MIT",
