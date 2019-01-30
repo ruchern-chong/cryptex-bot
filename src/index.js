@@ -1,5 +1,6 @@
 import Discord from 'discord.js'
 import { token } from '../keys'
+import { stripEmoji } from './helpers'
 
 const client = new Discord.Client()
 
@@ -9,8 +10,6 @@ client.on('message', async message => {
   const { member, channel, guild } = message
 
   if (message.content === `!invites`) {
-    const stripEmoji = /([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2694-\u2697]|\uD83E[\uDD10-\uDD5D])/g
-
     const inviteRoles = [
       { name: 'Viscount', threshold: 250 },
       { name: 'Czar', threshold: 100 },
@@ -24,7 +23,7 @@ client.on('message', async message => {
     await guild
       .fetchInvites()
       .then(response => (invites = response))
-      .catch(error => console.log(error))
+      .catch(error => console.error(error))
 
     userInvites = invites.filter(invite => invite.inviter === member.user)
 
@@ -35,7 +34,7 @@ client.on('message', async message => {
     )
 
     const roleId = guild.roles.find(guildRole =>
-      guildRole.name.replace(stripEmoji, '').includes(roleToBeAdded.name)
+      stripEmoji(guildRole.name).includes(roleToBeAdded.name)
     ).id
 
     member
@@ -46,4 +45,7 @@ client.on('message', async message => {
   }
 })
 
-client.login(token).then(() => console.log('Successfully logged in.'))
+client
+  .login(token)
+  .then(() => console.log('Successfully logged in.'))
+  .catch(error => console.error(error))
