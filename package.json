@@ -8,13 +8,19 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node src/index.js",
+    "start": "nodemon src/index.js --exec babel-node",
+    "build": "babel src/*.js -d build",
     "lint": "eslint --ext .js src"
   },
   "dependencies": {
     "discord.js": "^11.3.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.9.0",
@@ -31,7 +37,7 @@
     }
   },
   "lint-staged": {
-    ".{js,json}": [
+    "*.{js}": [
       "prettier",
       "eslint --fix",
       "git add"
