@@ -39,7 +39,9 @@ client.on('message', async message => {
 
     member
       .addRole(roleId)
-      .then(() => console.log('Member assigned with respective role.'))
+      .then(() =>
+        console.log('Member have been assigned with the respective role.')
+      )
 
     channel.send(`Hi ${member}, you have ${inviteCount} invites.`)
   }
