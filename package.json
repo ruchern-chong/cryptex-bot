@@ -4,7 +4,7 @@
   "description": "A bot for Cryptex Discord Server",
   "main": "src/index.js",
   "repository": "https://github.com/ruchern/cryptex-bot.git",
-  "author": "Ru Chern Chong <me@ruchern.com>",
+  "author": "Ru Chern Chong <hello@ruchern.net>",
   "license": "MIT",
   "private": true,
   "scripts": {
