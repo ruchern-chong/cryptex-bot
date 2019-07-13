@@ -1,4 +1,7 @@
 # Cryptex Bot
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ruchern/cryptex-bot.svg)](https://greenkeeper.io/)
+
 This is a bot that provides news and some non-intrusive information for [Cryptex Discord Server](https://discord.gg/YKpUTPx).
 
 ## Prerequisites
