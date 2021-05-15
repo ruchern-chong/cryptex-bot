@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "typedocOptions": {
+    "entryPoints": ["src"],
+    "out": "docs"
+  },
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts"]
+}
